@@ -4,6 +4,7 @@
 - 💞️ I will build my foundation on GitHub so people can see my progress.
 - 📫 How to reach me: please send it to my personal email at thangtc.2k22@gmail.com
 - 😄 Pronouns: Hardworking, diligent, eager to learn.
+- 👌👌👌
 
 
 <!---
