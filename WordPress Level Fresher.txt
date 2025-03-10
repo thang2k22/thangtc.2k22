@@ -1,0 +1,120 @@
+Lộ trình trở thành lập trình viên WordPress mức Fresher
+Giai đoạn 1: Kiến thức cơ bản về Web và WordPress (2-3 tuần)
+Mục tiêu: Hiểu cách hoạt động của website, cách WordPress hoạt động và các khái niệm cơ bản về lập trình web.
+
+Kiến thức cần học:
+
+HTML/CSS cơ bản: Cách xây dựng cấu trúc và giao diện website.
+PHP cơ bản: Ngôn ngữ chính để phát triển WordPress.
+Cách WordPress hoạt động: Cài đặt, theme, plugin, dashboard.
+Tài liệu và video:
+
+HTML/CSS:
+Video: HTML & CSS Full Course - Beginner to Pro (freeCodeCamp).
+Tài liệu: W3Schools HTML và CSS.
+PHP cơ bản:
+Video: PHP Tutorial for Beginners (Traversy Media).
+Tài liệu: PHP Manual.
+WordPress cơ bản:
+Video: WordPress Tutorial for Beginners (WPBeginner).
+Tài liệu: WordPress Codex.
+Bài tập:
+
+Tạo một trang HTML đơn giản với tiêu đề, đoạn văn và hình ảnh, sau đó thêm CSS để định dạng màu sắc và bố cục.
+Viết một hàm PHP đơn giản để in ra “Xin chào, [tên bạn]” và tích hợp vào trang HTML.
+Cài WordPress trên localhost (sử dụng XAMPP hoặc LocalWP) và làm quen với giao diện quản trị.
+Dự án thực tế: Tạo một website tĩnh đơn giản bằng HTML/CSS (ví dụ: trang giới thiệu bản thân).
+
+Giai đoạn 2: Làm quen với WordPress Theme và Plugin (3-4 tuần)
+Mục tiêu: Hiểu cấu trúc theme WordPress và cách tùy chỉnh cơ bản.
+
+Kiến thức cần học:
+
+Cấu trúc theme WordPress: Các file chính như index.php, header.php, footer.php, functions.php.
+Template Hierarchy: Cách WordPress chọn file để hiển thị.
+Hooks (Actions & Filters): Cơ bản về cách thêm hoặc chỉnh sửa chức năng.
+Plugin cơ bản: Cách cài đặt và tùy chỉnh plugin.
+Tài liệu và video:
+
+Theme Development:
+Video: WordPress Theme Development Tutorial (Tyler Moore).
+Tài liệu: WordPress Theme Handbook.
+Hooks:
+Video: Understanding WordPress Hooks (WPTuts).
+Tài liệu: Actions & Filters.
+Bài tập:
+
+Tạo một theme WordPress đơn giản với header.php, footer.php, và index.php. Thêm một menu tĩnh.
+Sử dụng hook wp_footer để thêm dòng chữ “Copyright 2025” vào chân trang.
+Cài plugin Contact Form 7 và tùy chỉnh giao diện form liên hệ bằng CSS.
+Dự án thực tế: Tạo một theme WordPress cơ bản cho một blog cá nhân (có homepage, single post, và sidebar).
+
+Giai đoạn 3: Phát triển Theme và Tùy chỉnh nâng cao (4-6 tuần)
+Mục tiêu: Thành thạo phát triển theme và làm việc với WordPress API.
+
+Kiến thức cần học:
+
+Custom Post Types: Tạo loại nội dung tùy chỉnh.
+Custom Fields: Sử dụng plugin như ACF (Advanced Custom Fields).
+WordPress Loop: Hiển thị bài viết động.
+Responsive Design: Tích hợp CSS framework như Bootstrap.
+Tài liệu và video:
+
+Custom Post Types:
+Video: Custom Post Types in WordPress (WPTuts).
+Tài liệu: Post Types.
+ACF:
+Video: Advanced Custom Fields Tutorial (WPBeginner).
+Tài liệu: ACF Documentation.
+Bootstrap:
+Video: Bootstrap 5 Crash Course (Traversy Media).
+Bài tập:
+
+Tạo một Custom Post Type “Portfolio” và hiển thị danh sách portfolio trên homepage.
+Thêm trường tùy chỉnh (Custom Field) như “Ngày hoàn thành” vào Portfolio bằng ACF.
+Tích hợp Bootstrap vào theme để tạo giao diện responsive.
+Dự án thực tế: Xây dựng một website portfolio cá nhân với danh sách dự án và trang chi tiết dự án.
+
+Giai đoạn 4: Phát triển Plugin và thực hành thực tế (4-6 tuần)
+Mục tiêu: Tự viết plugin cơ bản và chuẩn bị kỹ năng đi làm.
+
+Kiến thức cần học:
+
+Plugin Development: Cấu trúc plugin, thêm shortcode, widget.
+WordPress REST API: Tương tác với dữ liệu WordPress.
+Debugging: Sử dụng công cụ như Query Monitor để tìm lỗi.
+Tài liệu và video:
+
+Plugin Development:
+Video: WordPress Plugin Development Tutorial (LearnWebCode).
+Tài liệu: Plugin Handbook.
+REST API:
+Video: WordPress REST API Basics (WPTuts).
+Tài liệu: REST API Handbook.
+Bài tập:
+
+Tạo một plugin đơn giản để thêm shortcode [hello] hiển thị “Xin chào từ plugin!”.
+Tạo một widget tùy chỉnh hiển thị thông tin liên hệ (email, số điện thoại).
+Sử dụng REST API để lấy danh sách bài viết và hiển thị bằng JavaScript.
+Dự án thực tế: Xây dựng một plugin quản lý danh sách công việc (to-do list) với giao diện trên dashboard.
+
+Giai đoạn 5: Chuẩn bị đi làm (2-3 tuần)
+Mục tiêu: Hoàn thiện kỹ năng và xây dựng portfolio.
+
+Kiến thức cần học:
+
+Git & GitHub: Quản lý mã nguồn.
+SEO cơ bản: Tối ưu website WordPress.
+Portfolio: Tổng hợp dự án đã làm.
+Tài liệu và video:
+
+Git:
+Video: Git & GitHub Crash Course (Traversy Media).
+SEO:
+Video: WordPress SEO Tutorial (WPBeginner).
+Bài tập:
+
+Đẩy code của theme và plugin lên GitHub.
+Tối ưu SEO cho website portfolio (sử dụng plugin Yoast SEO).
+Viết CV và chuẩn bị phỏng vấn với các câu hỏi về WordPress.
+Dự án thực tế: Hoàn thiện portfolio cá nhân (website giới thiệu bản thân, các dự án đã làm) và đăng lên hosting miễn phí (như 000webhost).
