@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cửa Hàng Quần Áo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #ecf0f1;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: bold;
+        }
+
+        .filter {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+        }
+
+        .product-card {
+            border: 1px solid #ddd;
+            padding: 1rem;
+            text-align: center;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .product-card img {
+            max-width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .product-card h3 {
+            margin: 0.5rem 0;
+            font-size: 1.2rem;
+        }
+
+        .product-card p {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+
+        .product-card button {
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 0.5rem;
+        }
+
+        .product-card button:hover {
+            background-color: #34495e;
+        }
+
+        #cart {
+            padding: 2rem;
+            background-color: #f9f9f9;
+            display: none;
+        }
+
+        #cart h2 {
+            margin-bottom: 1rem;
+        }
+
+        #cart-items {
+            list-style-type: none;
+        }
+
+        #cart-items li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cửa Hàng Quần Áo - Thời Trang 2025</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Trang Chủ</a></li>
+            <li><a href="#men">Đồ Nam</a></li>
+            <li><a href="#women">Đồ Nữ</a></li>
+            <li><a href="#sale">Khuyến Mãi</a></li>
+        </ul>
+        <div class="filter">
+            <select id="category-filter" onchange="filterProducts()">
+                <option value="all">Tất cả</option>
+                <option value="men">Đồ Nam</option>
+                <option value="women">Đồ Nữ</option>
+            </select>
+            <button onclick="toggleCart()">Giỏ Hàng (<span id="cart-count">0</span>)</button>
+        </div>
+    </nav>
+
+    <section class="products" id="product-list">
+        <div class="product-card" data-category="men">
+            <img src="../web_test/img/sominam.jpeg">
+            <h3>Áo Sơ Mi Nam Trắng</h3>
+            <p>Giá: 350.000 VNĐ</p>
+            <button onclick="addToCart('Áo Sơ Mi Nam Trắng', 350000)">Thêm vào giỏ</button>
+        </div>
+
+        <div class="product-card" data-category="women">
+            <img src="../web_test/img/vaymaxi.jpg">
+            <h3>Váy Maxi Hoa Nhí</h3>
+            <p>Giá: 550.000 VNĐ</p>
+            <button onclick="addToCart('Váy Maxi Hoa Nhí', 550000)">Thêm vào giỏ</button>
+        </div>
+
+        <div class="product-card" data-category="men">
+            <img src="../web_test/img/jeanrach.jpg">
+            <h3>Quần Jeans Nam Rách</h3>
+            <p>Giá: 450.000 VNĐ</p>
+            <button onclick="addToCart('Quần Jeans Nam Rách', 450000)">Thêm vào giỏ</button>
+        </div>
+
+        <div class="product-card" data-category="women">
+            <img src="../web_test/img/thunnu.png">
+            <h3>Áo Thun Nữ Oversize</h3>
+            <p>Giá: 250.000 VNĐ</p>
+            <button onclick="addToCart('Áo Thun Nữ Oversize', 250000)">Thêm vào giỏ</button>
+        </div>
+
+        <div class="product-card" data-category="men">
+            <img src="../web_test/img/bombernam.jpeg">
+            <h3>Áo Khoác Nam Bomber</h3>
+            <p>Giá: 650.000 VNĐ</p>
+            <button onclick="addToCart('Áo Khoác Nam Bomber', 650000)">Thêm vào giỏ</button>
+        </div>
+
+        <div class="product-card" data-category="women">
+            <img src="../web_test/img/chanvayxeply.jpg">
+            <h3>Chân Váy Xếp Ly</h3>
+            <p>Giá: 300.000 VNĐ</p>
+            <button onclick="addToCart('Chân Váy Xếp Ly', 300000)">Thêm vào giỏ</button>
+        </div>
+
+        <div class="product-card" data-category="men">
+            <img src="../web_test/img/polonam.jpg">
+            <h3>Áo Polo Nam Cao Cấp</h3>
+            <p>Giá: 400.000 VNĐ</p>
+            <button onclick="addToCart('Áo Polo Nam Cao Cấp', 400000)">Thêm vào giỏ</button>
+        </div>
+
+        <div class="product-card" data-category="women">
+            <img src="../web_test/img/damombody.jpeg">
+            <h3>Đầm Ôm Body Đẹp</h3>
+            <p>Giá: 700.000 VNĐ</p>
+            <button onclick="addToCart('Đầm Ôm Body Đẹp', 700000)">Thêm vào giỏ</button>
+        </div>
+    </section>
+
+    <section id="cart">
+        <h2>Giỏ Hàng</h2>
+        <ul id="cart-items"></ul>
+        <p>Tổng tiền: <span id="cart-total">0</span> VNĐ</p>
+        <button onclick="toggleCart()">Đóng</button>
+    </section>
+
+    <footer>
+        <p>© 2025 Cửa Hàng Quần Áo. All rights reserved.</p>
+    </footer>
+</body>
+</html>
